@@ -18,8 +18,8 @@ RUN wget -O /app/model/tokenizer_config.json https://huggingface.co/BAAI/bge-rer
 
 COPY . .
 
-EXPOSE 8000
+EXPOSE 50051
 
 ENV PYTHONUNBUFFERED=1
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--log-level", "info"]
+CMD ["python", "main.py"]
